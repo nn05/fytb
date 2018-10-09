@@ -1,0 +1,59 @@
+header
+	padding: 10px 30px
+	&-body
+		&__nav
+.header-nav
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__logo
+	&__menu
+		display: flex
+		align-items: center
+		justify-content: space-between
+.header-logo
+	a
+		display: block
+		img
+
+.header-menu
+	li
+		margin-right: 40px
+		// халтура ;)
+		&.header-menu__btn
+			a
+				color: #ffffff
+				&:hover
+					margin-left: 0
+		&:last-child
+			margin-right: 0px
+			a
+				&:hover
+					margin-left: 0
+		a
+			text-decoration: none
+			border: none
+			+rfs(14px)
+			font-weight: 500
+			line-height: 1.71
+			letter-spacing: 0px
+			color: #646464
+			&.header-menu__login
+				font-weight: bold
+			&:hover
+				margin-left: -10px
+				color: #3c3c3c
+				span
+					border-radius: 50%
+					background-color: rgba(244,21,21,0.8)
+					color: #ffffff
+					padding: 2px 2px 2px 8px
+			img
+	&__btn
+		a
+			padding: 17px 30px
+			background-color: rgba(244,21,21,0.8)
+			display: flex
+			img
+				padding-right: 5px
+

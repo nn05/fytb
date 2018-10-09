@@ -8,5 +8,5 @@ gulp.task('fonts', function () {
   });
    
   gulp.task('fonts:watch', function () {
-    gulp.watch(cnf.dist.fonts, ['fonts']);
+    gulp.watch(cnf.src.fonts, ['fonts']);
   });
