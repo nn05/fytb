@@ -1,7 +1,6 @@
 .intro
 	&-body
 		position: relative
-		height: 100%
 		padding-bottom: 100px
 		&__slider
 		&__infoblock
@@ -28,12 +27,10 @@
 .intro-upperinfo
 	margin-top: 40px
 	margin-left: 40px
-	margin-bottom: 100px
 	&__title
 		width: 60%
 		+rfs(20px)
 		font-weight: bold
-		margin-bottom: 40px
 	&__text
 		+rfs(14px)
 		font-weight: 500
@@ -41,7 +38,6 @@
 	margin-left: 40px
 	&__info
 .intro-counts
-	margin-bottom: 35px
 	&__money
 		font-family: AvenirNext
 		+rfs(20px)
@@ -76,7 +72,7 @@
 			display: block
 			border-radius: 50%
 			background-color: rgba(244,21,21,0.8)
-			padding: 6px 5px 5px 5px
+			padding: 2px 5px 2px 4px
 			img
 .projects
 	&-body
@@ -85,16 +81,6 @@
 			align-items: center
 			justify-content: center
 		&__propose
-			display: flex
-			justify-content: flex-end
-			span
-				display: block
-				padding: 19px
-				background-color: rgba(244, 21, 21, 0.8)
-				color: #ffffff
-				+rfs(14px)
-				img
-					padding-right: 5px
 		&__nav
 		&__gird
 .projects-nav
@@ -109,11 +95,13 @@
 	flex-direction: row
 	justify-content: space-between
 	align-items: center
+	flex-wrap: wrap
 	&__item
 .project-item
 	position: relative
 	width: (100% / 4)
 	img
+		display: block
 		z-index: 1
 		width: 100%
 	&__title
@@ -127,10 +115,16 @@
 		color: #4a4a4a
 		font-weight: bold
 	&__hover
+.project-item:hover
+		.project-item__title
+			display: none
+		.project-hover
+			display: flex
+
 .project-hover
 	background-color: #ffffff
 	position: absolute
-	top: 10%
+	top: 5%
 	width: 80%
 	margin-left: 10%
 	display: flex
@@ -138,6 +132,7 @@
 	flex-wrap: wrap
 	justify-content: center
 	align-items: center
+	display: none
 	&__title
 		+rfs(20px)
 		font-weight: bold
@@ -155,17 +150,265 @@
 	&__supbtn
 		background-color: rgba(244,21,21,0.8)
 		padding: 5px
-		margin-bottom: 20px
+		margin-bottom: 40px
 		a
 			color: #ffffff
 			+rfs(14px)
 			font-weight: bold
 	&__progressbar
+	&__pbtext
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 80%
+		font-family: AvenirNext
+		+rfs(18px)
+		font-weight: bold
+		letter-spacing: 0px
+		.first-text
+			color: rgba(244, 21, 21, 0.8)
+		.last-text
+			color: #4a4a4a
 .project-progressbar
+	display: flex
+	align-items: center
 	width: 90%
-	height: 6px
-	.progress
+	margin-bottom: 25px
+	.progress	
 		width: 100%
 	&__style
+		height: 6px
+	&__count
 		background-color: #f34a4a
+.progress-fcircle
+	position: absolute
+	border-radius: 50%
+	padding: 8px
+	background-color: #f34a4a
+.progress-lcircle
+	position: absolute
+	border-radius: 50%
+	right: 5%
+	padding: 8px
+	background-color: #e9ecef
+.projects-allprojects
+	margin-top: 25px
+	.projects-body__propose
+		justify-content: center
+		span
+			padding: 18px 45px
+.projects-forworkers
+	display: flex
+	justify-content: center
+	+rfs(14px)
+	font-weight: bold
+	margin-top: 10px
+.information
+	padding: 77px 0
+	&-body
+		&__title
+			display: flex
+			justify-content: center
+		&__nav
+			margin-top: 30px
+			display: flex
+			justify-content: center
+			align-items: center
+		&__grid
+.information-nav
+.information-grid
+		display: flex
+		position: relative
+		flex-wrap: wrap
+		.toplevel
+			width: (100% / 4)
+		.lowlevel
+			width: (100% / 8)	
+		&__item
+			flex-wrap: wrap
+			img
+				width: 100%
+.information-item
+	&:hover
+		border: 3px solid #F41515
+	&__content
+.information-content
+	position: absolute
+	top: 40%
+	margin-left: 20px
+	color: #ffffff
+	&__date
+		+rfs(14px)
+		span
+			padding: 8px 10px
+			background-color: rgba(244, 21, 21, .8)
+	&__text
+		margin-top: 5px
+		+rfs(14px)
+		font-weight: bold
+	&__title
+		margin-top: 5px
+		font-weight: bold
+		+rfs(20px)
+.information-instagram
+	position: absolute
+	display: flex
+	top: 70%
+	background-color: #ffffff
+	&__text
+		display: flex
+		align-items: center
+		+rfs(20px)
+		font-weight: bold
+		text-align: center
+		padding: 0 30px 0 20px
+	&__logo
+		color: #ffffff
+		padding: 10px
+		background-color: rgba(244, 21, 21, .8)
+.information-allnews
+	margin-top: 25px
+	.projects-body__propose
+		justify-content: center
+		span
+			padding: 18px 45px
+.shop
+	&-body
+		&__grid
+.shop-grid
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	&__item
+		position: relative
+		width: ((100% /4)-1%)
+		padding: 1px
+		a
+			img
+				display: block
+				width: 100%
+				&:hover
+					border: 3px solid #F41515
+
+.shop-item
+	&:hover
+		.shop-about__text, .shop-about__price
+			display: none
+		.shop-about__buy
+			display: block
+		a
+			img
+				
+	&__about
+.shop-about
+	position: absolute
+	width: 100%-20%
+	top: 50%
+	color: #4A4A4A
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	margin-left: 25px
+	&__title
+		+rfs(18px)
+		width: 100%
+		font-weight: bold
+		background-color: #ffffff
+		margin-bottom: 1px
+		padding: 5px 15px 5px 15px
+	&__text
+		+rfs(14px)
+		background-color: #ffffff
+		padding: 5px 15px 5px 15px
+	&__price
+		+rfs(20px)
+		font-weight: bold
+		background-color: #ffffff
+		padding: 5px 15px 5px 15px
+	&__buy
+		display: none
+		text-align: center
+		+rfs(14px)
+		color: #ffffff
+		background-color: rgba(244, 21, 21, .8)
+		padding: 20px 0px
+.shop-menu
+	background-color: rgba(244, 21, 21, .8)
+	color: #ffffff
+	max-height: 414px
+	&__title
+		+rfs(20px)
+		font-weight: bold
+		margin-left: 30px
+		margin-top: 20px
+		display: flex
+		align-items: center
+		span
+			padding: 5px 0px 0px 3px
+	&__text
+		margin-top: 7px
+		+rfs(14px)
+		width: 80%
+		margin-left: 30px
+	&__nav
+		margin-left: 70px
+		margin-top: 1px
+		li
+			padding: 5px 0px
+			a
+				+rfs(14px)
+				font-weight: bold
+				color: #ffffff
+				&:hover
+					margin-left: -10px
+					span
+						border-radius: 50%
+						background-color: #ffffff
+						padding: 2px 2px 2px 8px
+						&:first-child
+							color: rgba(244, 21, 21, .8)
+	&__visit
+		border-top: 1px solid #ffffff
+		text-align: center
+		padding: 27px 0px
+		span
+			+rfs(14px)
+			font-weight: bold
+			color: #ffffff
+.shop-nav
+	li
+		a
+.partners
+	&-body
+		padding: 77px 0px 0px 0px
+		&__title
+		text-align: center
+		&__grid
+.partners-grid
+	margin-top: 30px
+	display: flex
+	flex-wrap: wrap
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		width: (100% / 4)
+		border: 1px solid #C5C5C5
+		&:hover
+			border: 1px solid #000000
+			&:last-child
+				border: none
+		a
+			display: block
+			img
+				padding: 20px
+		&:last-child
+			display: block
+				
+.partners-item
+	&__buttons
+		&:first-child
+			border-bottom: 1px solid #ffffff
+		a
+			width: 100%
 

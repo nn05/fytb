@@ -9,6 +9,6 @@ gulp.task('server', function() {
 
         },
         files: ['dist/**/*.*'],
-        browser: "google chrome"
+        browser: "chrome"
     });
 });

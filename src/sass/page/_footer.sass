@@ -1,0 +1,70 @@
+.footer
+	padding: 77px 0px 77px 0px
+	background-color: #2A2A2A
+	&-body
+		&__items
+			// позиціонування секцій, що б не задавати одне і теж саме для декількох классів
+			display: flex
+			justify-content: space-between
+			section
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				&:last-child
+					justify-content: flex-start
+				&:nth-last-child(2)
+					justify-content: flex-start
+
+.footer-items
+	&__menu
+	&__buttons
+.footer-menu
+	+rfs(14px)
+	color: #ffffff
+	&__title
+		font-weight: bold
+	ul
+		margin-top: 30px
+		li
+			margin-right: 0
+			padding: 3px 0px
+			a
+				.write-us
+					font-weight: bold
+				color: #ffffff
+				&:hover
+					margin-left: 0px
+					color: rgba(244, 21, 21, .8)
+.footer-buttons
+	+rfs(14px)
+	a
+		margin-top: 10px
+		color: #ffffff
+		display: flex
+		align-items: center
+		background-color: rgba(244,21,21, .8)
+		padding: 15px
+		span
+			padding-left: 5px
+.footer-copyrigths
+	color: #4a4a4a
+	padding-bottom: 30px
+	+rfs(14px)
+	.container
+		margin-top: 35px
+		display: flex
+		justify-content: space-between
+	&__left
+	&__right
+.footer-left
+	display: flex
+	flex-direction: column
+	&__deal
+	&__rules
+		margin-top: 18px
+	&__copydate
+		margin-top: 18px
+		color: #bfbfbf
+		text-transform: uppercase
+.footer-right
+	&__logo
